@@ -6,7 +6,7 @@ jsllab is the inference library of Pyllab in javascript.
 
 # To run your models you need to compile
 
-Don't worry you are covered: use docker (i will you explain the steps).
+Don't worry weìve got you covered: use docker (i will you explain the steps).
 
 Since jsllab read your models directly from webassembly you need
 to embed the .bin files during the compilation. 
@@ -15,7 +15,7 @@ From the compilation will be generated a .data file where your models have been 
 
 - Download the repo
 
-- Put your binary files in the root directory (where is located this readme)
+- Put your binary files in the root directory (where this readme is located)
 
 - Install docker from https://docs.docker.com/install/
 
