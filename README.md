@@ -29,7 +29,7 @@ docker pull ezspark/ezspark-backend
 - Run the image in a container:
 
 ```
-docker run -it --net=host --rm -v <ABSOLUTE PATH OF THIS README>:/project webassembly/toolchain:latest /bin/bash --login
+docker run -it --net=host --rm -v <ABSOLUTE PATH OF THE PROJECT>:/project ezspark/ezspark-backend:first_image /bin/bash --login
 ```
 
 - Update The version of emscripten (from here you are in the bash of the docker)
