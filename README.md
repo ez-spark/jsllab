@@ -24,7 +24,7 @@ From the compilation will be generated a .data file where your models have been 
 - Download a pre-built docker image:
 
 ```
-docker pull webassembly/toolchain
+docker pull ezspark/ezspark-backend
 ```
 - Run the image in a container:
 
@@ -40,43 +40,6 @@ git pull
 ./emsdk install latest
 ./emsdk activate latest
 source emsdk_env.sh
-```
-
-- Set python 3 as dafault python instead of python2.7 to run new emscripten code:
-
-- First install vim
-```
-apt-get install vim
-```
-- Then
-```
-vim ~/.bashrc
-```
-
-- Add this line to the file you opened (~/.bashrc)
-```
-alias python=python3
-```
-
-- To save and exit from vim :wq + ENTER
-
-- Run the file with source:
-```
-source ~/.bashrc
-```
-
-- Install all the needed dependencies (can take several minutes):
-
-```
-apt-get update
-apt-get install python3 -y
-apt install python3-pip
-```
-
-- Check the version of emscripten, should be > 2.0.0
-
-```
-emcc -v
 ```
 
 - If you are in emsdk:
