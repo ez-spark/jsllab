@@ -6,7 +6,7 @@ jsllab is the inference library of Pyllab in javascript.
 
 # To run your models you need to compile
 
-Don't worry you are covered: use docker (i will you explain the steps).
+Don't worry we've got you covered: use docker (i will you explain the steps).
 
 Since jsllab read your models directly from webassembly you need
 to embed the .bin files during the compilation. 
@@ -15,7 +15,7 @@ From the compilation will be generated a .data file where your models have been 
 
 - Download the repo
 
-- Put your binary files in the root directory (where is located this readme)
+- Put your binary files in the root directory (where this readme is located)
 
 - Install docker from https://docs.docker.com/install/
 
@@ -24,12 +24,12 @@ From the compilation will be generated a .data file where your models have been 
 - Download a pre-built docker image:
 
 ```
-docker pull webassembly/toolchain
+docker pull ezspark/ezspark-backend
 ```
 - Run the image in a container:
 
 ```
-docker run -it --net=host --rm -v <ABSOLUTE PATH OF THIS README>:/project webassembly/toolchain:latest /bin/bash --login
+docker run -it --net=host --rm -v <ABSOLUTE PATH OF THE PROJECT>:/project ezspark/ezspark-backend:first_image /bin/bash --login
 ```
 
 - Update The version of emscripten (from here you are in the bash of the docker)
@@ -40,43 +40,6 @@ git pull
 ./emsdk install latest
 ./emsdk activate latest
 source emsdk_env.sh
-```
-
-- Set python 3 as dafault python instead of python2.7 to run new emscripten code:
-
-- First install vim
-```
-apt-get install vim
-```
-- Then
-```
-vim ~/.bashrc
-```
-
-- Add this line to the file you opened (~/.bashrc)
-```
-alias python=python3
-```
-
-- To save and exit from vim :wq + ENTER
-
-- Run the file with source:
-```
-source ~/.bashrc
-```
-
-- Install all the needed dependencies (can take several minutes):
-
-```
-apt-get update
-apt-get install python3 -y
-apt install python3-pip
-```
-
-- Check the version of emscripten, should be > 2.0.0
-
-```
-emcc -v
 ```
 
 - If you are in emsdk:
